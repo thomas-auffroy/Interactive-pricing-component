@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/gui.css">
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
@@ -19,7 +20,9 @@
     </div>
     <div class="window">
       <div class="upper-side">
-        <div class="slider"></div>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
         <div class="person-touched">
           Pageviews
         </div>
@@ -28,7 +31,10 @@
         </div>
         <div class="subscription">
           <p>Monthly Billing</p>
-          <button id="btn-switch"></button>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider-btn round"></span>
+          </label>
           <p>Yearly Billing</p>
           <div id="discount">25% discount</div> 
         </div>
