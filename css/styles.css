@@ -20,20 +20,17 @@
 }
 
 body{
-  background: var(--very-pale-blue);
-  background-image: url("../images/bg-pattern.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: var(--very-pale-blue) url("../images/bg-pattern.svg") 0/cover no-repeat;
+  background: greenyellow url("../images/bg-pattern.svg") 0/cover no-repeat;
+  font-size: 15px;
 }
 .container{
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-.container p{
   color: var(--grayish-blue);
 }
+
 .intro{
   display: flex;
   flex-direction: column;
@@ -43,8 +40,9 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   
-  margin-top: 40px;
-  padding-top: 80px;
+  margin: 40px 0;
+  padding: 90px 0;
+  
 }
 .intro h1{
   color: var(--dark-desaturated-blue);
@@ -54,11 +52,10 @@ body{
   background-color: var(--white);
   border-radius: 10px;
   display: grid;
+  padding: 30px;
   width: 600px;
   height: 400px;
-  transform: translateY(200px);
 }
-
 .window .lower-side{
   display: flex;
   justify-content: space-between;
@@ -68,12 +65,12 @@ body{
 .window .lower-side .guarantee{
   display: flex;
   flex-direction: column;
-  margin: 30px;
 }
-.window .lower-side .guarantee p{
+
+.guarantee p{
   line-height: 2em;
 }
-.window .lower-side .guarantee p:before{
+.guarantee p:before{
   content: url("../images/icon-check.svg");
   padding-right: 1em;
 }
@@ -85,7 +82,7 @@ body{
   justify-content: center;
   align-self: center;
   
-  margin: 30px;
+
   height: 40px;
   width: 150px;
   
@@ -94,6 +91,47 @@ body{
   border: 1px solid transparent;
   border-radius: 40px;
   cursor: pointer;
-
 }
 
+.upper-side{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "pageviews price"
+    "slider slider"
+    "sub-opt sub-opt";
+  align-items: center;
+}
+.upper-side .person-touched{
+  grid-area: pageviews;
+  
+  text-align: center;
+  text-transform: uppercase;
+}
+.upper-side .price{
+  text-align: center;
+  grid-area: price;
+}
+.upper-side .slidecontainer{
+  grid-area: slider;
+}
+
+.upper-side .subscription{
+  display: flex;
+  justify-content: flex-end;
+  grid-area: sub-opt;
+}
+.subscription p{
+  padding: 0 10px;
+}
+.subscription #discount{
+  margin: 0 10px;
+  padding: 0 3px;
+  
+  color: var(--light-red);
+  font-size: 11px;
+  
+  background: var(--light-grayish-red);
+  border-radius: 40px;
+}
