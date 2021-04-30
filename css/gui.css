@@ -1,0 +1,95 @@
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+  
+/* The slider */
+.slider-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--light-grayish-blue-bar);
+  transition: .4s;
+}
+  
+/* Circle inside slider*/
+.slider-btn:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+  
+input:checked + .slider-btn {
+  background-color: var(--strong-cyan);
+}
+  
+input:checked + .slider-btn:before {
+  transform: translateX(26px);
+}
+  
+/* Rounded sliders */
+.slider-btn.round {
+  border-radius: 34px;
+}
+  
+.slider-btn.round:before {
+  border-radius: 50%;
+} 
+
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  border-radius: 5px;
+  background-color: var(--light-grayish-blue-bar);
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+
+.slider::-moz-range-thumb {
+  width: 35px; /* Set a specific slider handle width */
+  height: 35px; /* Slider handle height */
+  border: transparent;
+  border-radius: 50%;
+  background: center/60% var(--strong-cyan) url("../images/icon-slider.svg") no-repeat;
+  cursor: pointer; /* Cursor on hover */
+  box-shadow: 1px 10px;
+}
+.slider:active{
+  cursor: grabbing;
+}
+  
