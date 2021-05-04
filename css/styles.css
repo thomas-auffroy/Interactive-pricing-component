@@ -51,7 +51,7 @@ body{
 .window{
   display: grid;
   
-  padding: 30px;
+  padding: 50px 50px 0 50px;
   
   width: 600px;
   height: 400px;
@@ -67,6 +67,8 @@ body{
   justify-content: space-between;
   align-self: center;
   border-top: 3px solid var(--very-pale-blue);
+  
+  padding: 20px 0;
 }
 .window .lower-side .guarantee{
   display: flex;
@@ -99,6 +101,7 @@ body{
   cursor: pointer;
 }
 
+
 .upper-side{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -111,14 +114,27 @@ body{
 }
 .upper-side .person-touched{
   grid-area: pageviews;
-  
-  text-align: center;
+    
+  font-weight: 800;
+
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .upper-side .price{
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
   grid-area: price;
 }
+.price strong{
+  font-size: 2.5em;
+  color: var(--dark-desaturated-blue);
+}
+.price span{
+  padding-left: 0.5em;
+}
+
 .upper-side .slidecontainer{
   grid-area: slider;
 }
