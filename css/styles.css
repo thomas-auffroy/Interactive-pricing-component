@@ -50,9 +50,7 @@ body{
 
 .window{
   display: grid;
-  
-  padding: 50px 50px 0 50px;
-  
+    
   width: 600px;
   height: 400px;
   
@@ -60,21 +58,20 @@ body{
   border-radius: 10px;
   
   box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
-  
 }
-.window .lower-side{
+.lower-side{
   display: flex;
   justify-content: space-between;
   align-self: center;
-  border-top: 3px solid var(--very-pale-blue);
   
-  padding: 20px 0;
+  padding: 30px 50px;
+  
+  border-top: 3px solid var(--very-pale-blue);
 }
 .window .lower-side .guarantee{
   display: flex;
   flex-direction: column;
 }
-
 .guarantee p{
   line-height: 2em;
 }
@@ -82,15 +79,12 @@ body{
   content: url("../images/icon-check.svg");
   padding-right: 1em;
 }
-
-
-.window .lower-side #btn-start{
+#btn-start{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: center;
   
-
   height: 40px;
   width: 150px;
   
@@ -99,6 +93,11 @@ body{
   border: 1px solid transparent;
   border-radius: 40px;
   cursor: pointer;
+  
+  transition: 1s all;
+}
+#btn-start:hover{
+  color: var(--white);
 }
 
 
@@ -111,6 +110,7 @@ body{
     "slider slider"
     "sub-opt sub-opt";
   align-items: center;
+  padding: 50px 50px 0 50px;
 }
 .upper-side .person-touched{
   grid-area: pageviews;
@@ -140,19 +140,24 @@ body{
 }
 
 .upper-side .subscription{
+  grid-area: sub-opt;
+  
   display: flex;
   justify-content: flex-end;
-  grid-area: sub-opt;
+  align-items: center;
+
 }
 .subscription p{
-  padding: 0 10px;
+  font-size: 0.8em;
+  padding: 0 1.5em;
 }
 .subscription #discount{
-  margin: 0 10px;
-  padding: 0 3px;
+  margin: 0 1em;
+  padding: 4px 6px;
   
   color: var(--light-red);
-  font-size: 11px;
+ 
+  font-size: 0.7em;
   
   background: var(--light-grayish-red);
   border-radius: 40px;
