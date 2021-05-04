@@ -1,42 +1,70 @@
 @media only screen and (max-width: 700px){
+   .window{
+    width: 320px;
+     height: 450px; 
+  }
   
   .switch{
     width: 40px;
+  }
+  .slidecontainer{
+    justify-self: center;
+    width: 95%;
+  }
+  
+  .container{
+    margin-bottom: 100px;
   }
   
   input:checked + .slider-btn:before {
     transform: translateX(16px);
   }
-  
-  
-  .window{
-    width: 320px;
-  }
-  
+ 
+
   .upper-side{
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4,50px);
+    grid-template-rows: repeat(4,1fr);
     grid-template-areas: 
       "pageviews"
       "slider"
       "price"
       "sub-opt";
-    
-    justify-items: center;
-    padding: 10px 15px;
+    padding: 20px 10px;
   }
 
   .upper-side .person-touched{
+    justify-self: center;
     font-size: 13px;
   }
+  .upper-side .price{
+    justify-self: center;
+  }
+
   .subscription p{
-    padding: 0 0.6em;
+    padding: 0 1em;
   }
   .subscription #discount{
     margin: 0;
   }
   .price strong{
-  font-size: 2em;
-  color: var(--dark-desaturated-blue);
-}
+    font-size: 2em;
+  }
+  
+  .lower-side{
+    flex-direction: column;
+    align-self: unset;
+    
+    
+  }
+  .guarantee{
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  .intro{
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  
 }
