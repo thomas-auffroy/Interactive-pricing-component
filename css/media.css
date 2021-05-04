@@ -1,0 +1,42 @@
+@media only screen and (max-width: 700px){
+  
+  .switch{
+    width: 40px;
+  }
+  
+  input:checked + .slider-btn:before {
+    transform: translateX(16px);
+  }
+  
+  
+  .window{
+    width: 320px;
+  }
+  
+  .upper-side{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,50px);
+    grid-template-areas: 
+      "pageviews"
+      "slider"
+      "price"
+      "sub-opt";
+    
+    justify-items: center;
+    padding: 10px 15px;
+  }
+
+  .upper-side .person-touched{
+    font-size: 13px;
+  }
+  .subscription p{
+    padding: 0 0.6em;
+  }
+  .subscription #discount{
+    margin: 0;
+  }
+  .price strong{
+  font-size: 2em;
+  color: var(--dark-desaturated-blue);
+}
+}
