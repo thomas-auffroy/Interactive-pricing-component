@@ -11,24 +11,21 @@ const str_discount = discount.innerText;
 
 var swt = document.querySelector(".switch input");
 
-
-
-var pair;
+var pair, bgOn, timeoutId;
 
 slider.addEventListener("mousedown", function(event){
     slider.addEventListener("mousemove", update, false);
 },false);
 
-
-slider.addEventListener("mouseup", function(event){
-    slider.removeEventListener("mousemove", update, false);
+slider.addEventListener("mouseup",function(event){
+    setTimeout(function(){slider.removeEventListener("mousemove", update, false);},100);
 },false);  
 
 swt.addEventListener("click",prc,false);
 
 window.addEventListener("resize",reportWindowSize,false);
 
-prc()
+prc();
 
 function prc(){
     if (swt.checked){
@@ -42,11 +39,17 @@ function prc(){
 function update(){
     pgv.innerText = Object.keys(pair)[slider.value-1].concat(" ",str_pgv);
     price.innerText = str_price + Object.values(pair)[slider.value-1].toFixed(2).toString();
+    bgOn = (slider.value - 1)* 25;
+    bgOn = bgOn.toString()+"%";
+    slider.style.background = "linear-gradient(to right, var(--strong-cyan) "+ bgOn +
+    ",var(--light-grayish-blue-bar) "+ bgOn +")";
 }
     
 function reportWindowSize(){
     if (window.innerWidth < 700)
-        discount.innerText = "-25%"
+        discount.innerText = "-25%";
     else
-        discount.innerText = str_discount
+        discount.innerText = str_discount;
 }
+
+
