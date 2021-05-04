@@ -21,7 +21,7 @@
 
 body{
   /*! background: var(--very-pale-blue) url("../images/bg-pattern.svg") top left/contain no-repeat; */
-  background: greenyellow url("../images/bg-pattern.svg") top left/contain no-repeat;
+  background: greenyellow url("../images/bg-pattern.svg") top left/100vw 60% no-repeat;
   font-size: 15px;
 }
 .container{
@@ -41,7 +41,7 @@ body{
   background-position: center;
   
   margin: 40px 0;
-  padding: 90px 0;
+  padding: 90px 30px;
   
 }
 .intro h1{
@@ -57,7 +57,7 @@ body{
   background-color: var(--white);
   border-radius: 10px;
   
-  box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
 }
 .lower-side{
   display: flex;
@@ -153,7 +153,7 @@ body{
 }
 .subscription #discount{
   margin: 0 1em;
-  padding: 4px 6px;
+  padding: 3px 6px;
   
   color: var(--light-red);
  
