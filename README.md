@@ -43,12 +43,11 @@ Users should be able to:
 
 ### What I learned
 
-With this projet, I learned to build a slider in HTML/CSS. AddEventListener faut parler de ça. 
+With this projet, I learned to build a slider in HTML/CSS. I also see for the first time the js function AddEventListener. I tried different event types for the slider, and input seems to be the best.
 
 ### Continued development
 
-Image background qui s'attache bien au body mais pas au container. Contiuer à bien struturer l'HTML pour que l'adaptabilité soit plus facile. Continue à apprendre le js pour avoir une bonne strcuture de code. Regarder si querryselector est une bonne méthode.
-
+For this project, I need to attach a background image in the back. I did not find a good way, I am not really conviced. I always use querrySelector in js, I don't know if it is the good way.
 
 ### Useful resources
 
