@@ -20,14 +20,14 @@
 }
 
 body{
-  /*! background: var(--very-pale-blue) url("../images/bg-pattern.svg") top left/contain no-repeat; */
-  background: greenyellow url("../images/bg-pattern.svg") top left/100vw 60% no-repeat;
+  background: var(--very-pale-blue) url("../images/bg-pattern.svg") top left/100vw 60% no-repeat;
   font-size: 15px;
 }
 .container{
   display: flex;
   align-items: center;
   flex-direction: column;
+   
   color: var(--grayish-blue);
 }
 
@@ -40,8 +40,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   
-  margin: 40px 0;
-  padding: 90px 30px;
+  padding: 80px 0;
   
 }
 .intro h1{
